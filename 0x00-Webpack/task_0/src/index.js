@@ -1,4 +1,4 @@
-import $ from "jQuery";
+import $ from 'jQuery';
 
 $('body').append('<p>Holberton Dashboard</p>');
 $('body').append('<p>Dashboard data for the students</p>');
