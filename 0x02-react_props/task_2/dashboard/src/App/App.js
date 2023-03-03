@@ -1,5 +1,4 @@
 import React from "react";
-import logo from '../assets/logo.png';
 import './App.css';
 import Notifications from "../Notifications/Notifications";
 import Header from "../Header/Header";
