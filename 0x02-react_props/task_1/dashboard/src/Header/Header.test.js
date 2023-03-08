@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import { shallow } ffrom "enzyme";
+import { shallow } from "enzyme";
 
 describe("Header", () => {
     it("renders without crashing", () => {
