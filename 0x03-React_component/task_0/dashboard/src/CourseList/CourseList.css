@@ -4,22 +4,22 @@ table {
     border: 1px solid #ddd;
     font-size: 1.2rem;
     margin-bottom: 15em;
-}
-
-th {
+  }
+  
+  th {
     border-bottom: 1px solid #ddd;
-}
-
-th,
-td {
+  }
+  
+  th,
+  td {
     width: 80%;
-}
-
-table {
+  }
+  
+  table {
     margin-left: auto;
     margin-right: auto;
-}
-
-tr:nth-child(2) {
+  }
+  
+  tr:nth-child(2) {
     text-align: left;
-}
+  }
