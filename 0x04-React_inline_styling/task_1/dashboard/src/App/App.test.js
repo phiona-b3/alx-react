@@ -70,7 +70,6 @@ describe("When ctrl + h is pressed", () => {
     wrapper.unmount();
   });
 
-  window.alert = jest.fn();
   document.alert = jest.fn();
   it("checks that alert function is called", () => {
     const wrapper = mount(<App />);

@@ -10,7 +10,6 @@ import { StyleSheet, css } from "aphrodite";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils";
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +28,7 @@ class App extends React.Component {
     { id: 2, type: "urgent", value: "New resume available" },
     { id: 3, type: "urgent", html: getLatestNotification() },
   ];
-  
+
   handleKeyPress(e) {
     if (e.ctrlKey && e.key === "h") {
       e.preventDefault();
