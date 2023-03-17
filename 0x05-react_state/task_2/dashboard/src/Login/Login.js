@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, css } from "aphrodite";
+import PropTypes from "prop-types";
 
-function Login() {
-
-  const [isLogedIn, setIsLoggedIn] = useState(false);
+function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [enableSubmit, setEnableSubmit] = useState(false);
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    setIsLoggedIn(true);
+    props.logIn(e.target.elements.email.value, e.target.elements.password.value);
   };
 
   const handleChangeEmail = (e) => {
@@ -18,7 +17,7 @@ function Login() {
   };
 
   const handleChangePassword = (e) => {
-    setPassword(e.target.vale);
+    setPassword(e.target.value);
   };
 
   useEffect(() => {
@@ -39,13 +38,17 @@ function Login() {
           <label htmlFor="email">Email:</label>
           <input className={css(styles.input)} type="email" id="email" name="email" value={email} onChange={handleChangeEmail} />
           <label htmlFor="password">Password:</label>
-          <input className={css(styles.input)} type="password" id="password" name="password" value= {password} onChange={handleChangePassword} />
-          <input type="submit" value="OK" disabled={!enableSubmit} />
+          <input className={css(styles.input)} type="password" id="password" name="password" value={password} onChange={handleChangePassword} />
+          <input type="submit" value="Ok" disabled={!enableSubmit} />
         </form>
       </div>
     </React.Fragment>
   );
 }
+
+Login.propTypes = {
+  logIn: PropTypes.func,
+};
 
 const styles = StyleSheet.create({
   "App-body": {
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
       flexDirection: "column",
     },
   },
-  
+
   input: {
     margin: "10px",
   },
