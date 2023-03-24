@@ -42,13 +42,14 @@ describe("Test for Notifications.js", () => {
 
     expect(normalized.result).toEqual(results);
   });
+
   it("should have correct users entity", () => {
     const user = {
       age: 25,
       email: "poole.sanders@holberton.nz",
       id: "5debd764a7c57c7839d722e9",
       name: { first: "Poole", last: "Sanders" },
-      picture: "http://placehold.it/32x32"
+      picture: "http://placehold.it/32x32",
     };
 
     expect(normalized.entities.users["5debd764a7c57c7839d722e9"]).toEqual(user);
@@ -59,7 +60,7 @@ describe("Test for Notifications.js", () => {
       guid: "efb6c485-00f7-4fdf-97cc-5e12d14d6c41",
       isRead: false,
       type: "default",
-      value: "Cursus risus at ultrices mi."
+      value: "Cursus risus at ultrices mi.",
     };
 
     expect(normalized.entities.messages["efb6c485-00f7-4fdf-97cc-5e12d14d6c41"]).toEqual(message);
@@ -69,7 +70,7 @@ describe("Test for Notifications.js", () => {
     const notificationDummy = {
       author: "5debd764f8452ef92346c772",
       context: "3068c575-d619-40af-bf12-dece1ee18dd3",
-      id: "5debd7642e815cd350407777"
+      id: "5debd7642e815cd350407777",
     };
 
     expect(normalized.entities.notification["5debd7642e815cd350407777"]).toEqual(notificationDummy)
